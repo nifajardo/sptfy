@@ -31,7 +31,7 @@ buttonElement.onclick = function(event){
 
  $.ajax ({
 
-        url: 'https://api.spotify.com/v1/search?q=' +value+ '&type=track',
+        url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
         type: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + accessToken
