@@ -52,9 +52,9 @@ buttonElement.onclick = function(event){
         console.log(' ');
         console.log(`id ${id}`); ////id 1TEL6MlSSVLSdhOSddidlJ
         // Constructing a iframe to embed a song
-        let src_str = `https://open.spotify.com/embed/track/${id}`;
+        let src_str = `https://open.spotify.com/embed/track/${src}`;
         console.log(`src_str ${src_str}`);
-        let iframe = `<iframe src=${src} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+        let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
         let parent_div = $('#content');
         parent_div.append(iframe);
       }
