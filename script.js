@@ -16,12 +16,24 @@ $( document ).ready(function() {
           }
       }
   };
+    const buttonElement = document.querySelector("#search");
+    const inputElement = document.querySelector("inputValue");
 
     const accessToken = getUrlParameter('access_token');
     console.log(`accessToken ${accessToken}`);
 
+buttonElement.onclick = function(event){
+  event.preventDefault();
+  const value = inputValue.value;
+  const url = 'https://api.spotify.com/v1/search';
+  const newUrl = url + "?q=" + value +'&type=track';
+
+ 
+}
+
+
   $.ajax ({
-      url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
+      url: 'newUrl',
       type: 'GET',
       headers: {
           'Authorization' : 'Bearer ' + accessToken
