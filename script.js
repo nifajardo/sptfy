@@ -19,9 +19,17 @@ $( document ).ready(function() {
 
     const accessToken = getUrlParameter('access_token');
     console.log(`accessToken ${accessToken}`);
-
-  $.ajax ({
-      url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
+const buttonElement = document.querySelector("#search");
+const inputElement = document.querySelector("inputValue");
+    
+ buttonElement.onclick = function(event){
+  event.preventDefault();
+  const value = inputValue.value;
+  const url = 'https://api.spotify.com/v1/search?q=';
+  const newUrl = url + value +'&type=track';
+     
+      $.ajax ({
+      url: newUrl,
       type: 'GET',
       headers: {
           'Authorization' : 'Bearer ' + accessToken
@@ -45,4 +53,7 @@ $( document ).ready(function() {
       }
   });
 
+}
+    
+ 
 });
