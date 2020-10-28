@@ -6,7 +6,7 @@ buttonElement.onclick = function(event){
 
 
   $.ajax ({
-        url: 'newUrl',
+        url: newUrl,
         type: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + accessToken
