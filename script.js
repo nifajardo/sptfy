@@ -47,7 +47,7 @@ buttonElement.onclick = function(event){
 
         document.write(JSON.stringify(data));
         // Example: Extract the id of the song from the data object
-        let src = data.tracks.items.[2].id
+        let src = data.tracks.items.[1].id
         let id = data.tracks.items[0].id;
         console.log(' ');
         console.log(`id ${id}`); ////id 1TEL6MlSSVLSdhOSddidlJ
