@@ -27,7 +27,7 @@ const playerContainer = document.querySelector("#content");
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
- 
+  $("#content").empty();
  
      
      
@@ -53,7 +53,7 @@ const playerContainer = document.querySelector("#content");
       
 
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-        let parent_div = $("#content").empty();
+        let parent_div = $("#content");
         parent_div.appendChild(iframe);
       }
   });
