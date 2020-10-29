@@ -30,10 +30,8 @@ const inputElement = document.querySelector("inputValue");
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
-     document.querySelectorAll('iframe').forEach(
-        function(elem){
-        elem.parentNode.removeChild(elem);
-    })
+  const frame = '';
+     
       $.ajax ({
       url: newUrl,
       type: 'GET',
@@ -53,12 +51,14 @@ const inputElement = document.querySelector("inputValue");
         // Constructing a iframe to embed a song
         let src_str = `https://open.spotify.com/embed/track/${id}`;
         console.log(`src_str ${src_str}`);
-        let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;\
-         $("#player_frame").val(iframe);
+        let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+         frame = iframe;
+        
     
         //let parent_div = $('#content');
         //parent_div.append(iframe);
       }
+           $("#player_frame").val(iframe);
   });
 
 }
