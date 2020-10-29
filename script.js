@@ -28,10 +28,9 @@ const inputElement = document.querySelector("inputValue");
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
      (function(){
-            const destroyFast = container => {
-                const el = document.getElementById('#content');
-                    while (el.firstChild) el.removeChild(el.firstChild);
-            };
+            while ($('#content').firstChild){
+                   $('#content').removeChild($('#content').firstChild);
+                   };
         })();
  
      
