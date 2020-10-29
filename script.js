@@ -21,15 +21,15 @@ $( document ).ready(function() {
     console.log(`accessToken ${accessToken}`);
 const buttonElement = document.querySelector("#search");
 const inputElement = document.querySelector("inputValue");
-    
+const playerContainer = document.querySelector("#content");
  buttonElement.onclick = function(event){
   event.preventDefault();
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
      (function(){
-            while ($('#content').firstChild){
-                   $('#content').removeChild($('#content').firstChild);
+            while (playerContainer.firstChild){
+                   playerContainer.removeChild(playerContainer.firstChild);
                    };
         })();
  
