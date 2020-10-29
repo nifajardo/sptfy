@@ -27,9 +27,7 @@ const playerContainer = document.querySelector("#content");
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
-     document.getElementById("#content").innerHTML = "";
-
-
+ 
  
      
      
@@ -52,8 +50,10 @@ const playerContainer = document.querySelector("#content");
         // Constructing a iframe to embed a song
         let src_str = `https://open.spotify.com/embed/track/${id}`;
         console.log(`src_str ${src_str}`);
+      
+
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-        let parent_div = $('#content');
+        let parent_div = $('#cont').empty();
         parent_div.appendChild(iframe);
       }
   });
