@@ -53,7 +53,7 @@ const playerContainer = document.querySelector("#content");
       
 
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-        let parent_div = $('#cont').empty();
+        let parent_div = $("#content").empty();
         parent_div.appendChild(iframe);
       }
   });
