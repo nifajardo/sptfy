@@ -23,11 +23,16 @@ const buttonElement = document.querySelector("#search");
 const inputElement = document.querySelector("inputValue");
     
  buttonElement.onclick = function(event){
+     
+
   event.preventDefault();
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
-     
+     document.querySelectorAll('iframe').forEach(
+        function(elem){
+        elem.parentNode.removeChild(elem);
+    })
       $.ajax ({
       url: newUrl,
       type: 'GET',
