@@ -27,12 +27,7 @@ const playerContainer = document.querySelector("#content");
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
-     document.body.innerHTML = "";
-     (function(){
-            while (playerContainer.firstChild){
-                   playerContainer.removeChild(playerContainer.firstChild);
-                   };
-        })();
+     $("#yourDiv").html("");
  
      
      
