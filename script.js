@@ -56,7 +56,7 @@ const playerContainer = document.querySelector("#content");
         console.log(`src_str ${src_str}`);
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
         let parent_div = $('#content');
-        parent_div.append(iframe);
+        parent_div.appendChild(iframe);
       }
   });
 
