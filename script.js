@@ -47,7 +47,6 @@ const inputElement = document.querySelector("inputValue");
         // Constructing a iframe to embed a song
         let src_str = `https://open.spotify.com/embed/track/${id}`;
         console.log(`src_str ${src_str}`);
- 
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
         let parent_div = $('#content');
         parent_div.append(iframe);
