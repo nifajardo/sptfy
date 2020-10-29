@@ -16,15 +16,7 @@ $( document ).ready(function() {
           }
       }
   };
-    function removeiframe() {
-            alert("Hello Lovely World");
-            var markup = document.body.innerHTML;
-            var filtered=markup.replace(/(<iframe.*?>.*?<\/iframe>)/g,"");
-            alert("he: " + markup);
-
-markup = filtered;
-document.body.innerHTML = markup + "<hr><hr>HELLO";
-        }
+  
     
     const accessToken = getUrlParameter('access_token');
     console.log(`accessToken ${accessToken}`);
@@ -33,7 +25,7 @@ const inputElement = document.querySelector("inputValue");
     
  buttonElement.onclick = function(event){
      
-    removeiframe();
+   
   event.preventDefault();
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
@@ -61,9 +53,10 @@ const inputElement = document.querySelector("inputValue");
         // Constructing a iframe to embed a song
         let src_str = `https://open.spotify.com/embed/track/${id}`;
         console.log(`src_str ${src_str}`);
-        let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-        let parent_div = $('#content');
-        parent_div.append(iframe);
+        //let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+        document.getElementById("player_frame").src = "${src_str};
+        //let parent_div = $('#content');
+        //parent_div.append(iframe);
       }
   });
 
