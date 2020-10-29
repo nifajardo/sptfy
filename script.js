@@ -22,13 +22,18 @@ $( document ).ready(function() {
 const buttonElement = document.querySelector("#search");
 const inputElement = document.querySelector("inputValue");
 const playerContainer = document.querySelector("#content");
+     $(document).ready(function(){
+        $("buttonElement").click(function(){
+ 
+        $("#content").empty();
+        });
+    });
  buttonElement.onclick = function(event){
   event.preventDefault();
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
-  $("#content").empty();
- 
+   
      
      
       $.ajax ({
