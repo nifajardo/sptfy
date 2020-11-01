@@ -16,21 +16,17 @@ $( document ).ready(function() {
           }
       }
   };
-  
-    
+
     const accessToken = getUrlParameter('access_token');
     console.log(`accessToken ${accessToken}`);
 const buttonElement = document.querySelector("#search");
 const inputElement = document.querySelector("inputValue");
     
  buttonElement.onclick = function(event){
-     
-   
   event.preventDefault();
   const value = inputValue.value;
   const url = 'https://api.spotify.com/v1/search?q=';
   const newUrl = url + value +'&type=track';
-  const frame = '';
      
       $.ajax ({
       url: newUrl,
@@ -52,16 +48,12 @@ const inputElement = document.querySelector("inputValue");
         let src_str = `https://open.spotify.com/embed/track/${id}`;
         console.log(`src_str ${src_str}`);
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-        $("player_frame").attr("src", ${src_str});
-        
-    
-        //let parent_div = $('#content');
-        //parent_div.append(iframe);
+        let parent_div = $('#content');
+        parent_div.append(iframe);
       }
-           
   });
 
 }
     
-
+ 
 });
