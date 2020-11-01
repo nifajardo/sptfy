@@ -70,7 +70,7 @@ const inputElement = document.querySelector("inputValue");
         let parent_div = $('#content');
         parent_div.append(iframe); */
       
-  };
+  });
 
 
 };
