@@ -39,12 +39,10 @@ const inputElement = document.querySelector("inputValue");
         console.log(' ');
         console.log('Got data back');
         // Let's console what gets returned for our search
-        console.log(JSON.stringify(data));
-        // Example: Extract the id of the song from the data object
-        
-       
-        data.tracks.forEach 
-         data.tracks.forEach(track => {
+        console.log(JSON.stringify(data)
+
+           data.tracks.forEach(track => {
+  
 
         let id = items[0].id;
         let src_str = `https://open.spotify.com/embed/track/${id}`;
@@ -56,6 +54,11 @@ const inputElement = document.querySelector("inputValue");
 
           $("#music-video").append(music)
         });
+    
+       
+       
+       
+       
        
        /* console.log(' ');
         console.log(`id ${id}`); ////id 1TEL6MlSSVLSdhOSddidlJ
