@@ -41,7 +41,7 @@ const inputElement = document.querySelector("inputValue");
         // Let's console what gets returned for our search
         console.log(JSON.stringify(data));
           
-          data.tracks.forEach(track => {
+          data.tracks.quotesArray.forEach(track => {
         let id = track.items[0].id;
         let src_str = `https://open.spotify.com/embed/track/${id}`;
        music = `
