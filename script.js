@@ -39,7 +39,7 @@ const inputElement = document.querySelector("inputValue");
         console.log(' ');
         console.log('Got data back');
         // Let's console what gets returned for our search
-        console.log(JSON.stringify(data)
+        console.log(JSON.stringify(data);
 
            data.tracks.forEach(track => {
   
