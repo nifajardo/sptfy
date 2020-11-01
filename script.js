@@ -41,8 +41,8 @@ const inputElement = document.querySelector("inputValue");
         // Let's console what gets returned for our search
         console.log(JSON.stringify(data));
           
-          $.each(data, function(){
-          let id = this.tracks.items[0].id;
+          $.each(data.tracks, function(){
+          let id = this.items[0].id;
           let src_str = `https://open.spotify.com/embed/track/${id}`;
           music = `
           <iframe width="420" height="315" src="$src_str"+  frameborder="0" allowfullscreen></iframe>
