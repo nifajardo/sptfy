@@ -69,8 +69,8 @@ const inputElement = document.querySelector("inputValue");
         let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
         let parent_div = $('#content');
         parent_div.append(iframe); */
-      }
+      
   };
 
 
-});
+};
