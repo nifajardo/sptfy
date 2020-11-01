@@ -34,7 +34,7 @@ const inputElement = document.querySelector("inputValue");
       headers: {
           'Authorization' : 'Bearer ' + accessToken
       },
-      success: function(data) {
+     success: function(data) {
         console.log(' ');
         console.log(' ');
         console.log('Got data back');
@@ -53,7 +53,7 @@ const inputElement = document.querySelector("inputValue");
           `
 
           $("#music-video").append(music)
-        });
+        }));
     
        
        
