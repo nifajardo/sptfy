@@ -41,14 +41,14 @@ const inputElement = document.querySelector("inputValue");
         // Let's console what gets returned for our search
         console.log(JSON.stringify(data));
           
-          data.tracks.quotesArray.forEach(track => {
-        let id = track.items[0].id;
-        let src_str = `https://open.spotify.com/embed/track/${id}`;
-       music = `
+          $.each(data, function(){
+          let id = this.tracks.items[0].id;
+          let src_str = `https://open.spotify.com/embed/track/${id}`;
+          music = `
           <iframe width="420" height="315" src="$src_str"+  frameborder="0" allowfullscreen></iframe>
           `
           $("#music-video").append(music)
-        });
+            });
           
          
         // Example: Extract the id of the song from the data object
