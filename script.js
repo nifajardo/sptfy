@@ -16,6 +16,7 @@ $( document ).ready(function() {
           }
       }
   };
+};
 
     const accessToken = getUrlParameter('access_token');
     console.log(`accessToken ${accessToken}`);
@@ -54,7 +55,7 @@ const inputElement = document.querySelector("inputValue");
 
           $("#music-video").append(music)
         });
-         }
+         };
     
        
        
@@ -71,6 +72,5 @@ const inputElement = document.querySelector("inputValue");
         parent_div.append(iframe); */
       
   });
-
 
 };
